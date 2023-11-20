@@ -6,6 +6,7 @@ CORS(app)
 
 @app.route('/', methods=['POST'])
 def home():
+    print("REc")
     try:
         # Extract data from the request
         input_data = request.json['input_data']
