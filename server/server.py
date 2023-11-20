@@ -22,9 +22,7 @@ def home():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred"}), 500
-
-@app.route('/hello')
-def hello_world():
-    return 'Hello, World!'
+if __name__=="__main__":
+    app.run(debug=True,port='5000',host='0.0.0.0')
 
 
