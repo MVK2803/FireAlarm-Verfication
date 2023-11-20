@@ -22,5 +22,6 @@ def home():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred"}), 500
-if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+@app.route('/hello')
+def hello_world():
+    return 'Hello, World!'
