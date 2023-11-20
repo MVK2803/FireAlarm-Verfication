@@ -32,7 +32,7 @@ function App() {
     //console.log('Sending data to the backend:', jsonData);
     try {
       //console.log(jsonData);
-      const result = await axios.post('https://firealarm-backend.onrender.com/', jsonData);
+      const result = await axios.post('http://127.0.0.1:5000/', jsonData);
       setanalysisRes(parseInt(result.data));
       //console.log(result.data); 
     } catch (error) {
