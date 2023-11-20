@@ -4,7 +4,7 @@ import fire_fun
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/verify', methods=['POST'])
 def home():
     print("REC")
     try:
