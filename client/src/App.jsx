@@ -32,7 +32,7 @@ function App() {
     //console.log('Sending data to the backend:', jsonData);
     try {
       //console.log(jsonData);
-      const result = await axios.post('https://varghesebackend2.onrender.com/', jsonData);
+      const result = await axios.post('http://192.168.29.225:5000/verify', jsonData);
       setanalysisRes(parseInt(result.data));
       console.log(result.data); 
     } catch (error) {
