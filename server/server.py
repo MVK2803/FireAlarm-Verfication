@@ -23,7 +23,7 @@ def home():
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred"}), 500
     
-@app.route('/', methods=['POST'])
+@app.route('/hello', methods=['GET'])
 def home():
     print("hello")
 
