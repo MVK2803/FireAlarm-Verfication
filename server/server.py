@@ -16,7 +16,7 @@ def home():
         print(testInput)
         # Perform prediction
         result = fire_fun.predictFalseAlarm(*testInput)
-
+        print(result)
         return jsonify(result)
     except Exception as e:
         print(f"Error: {str(e)}")
