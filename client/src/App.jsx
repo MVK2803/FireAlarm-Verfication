@@ -67,7 +67,13 @@ function App() {
                       </div>
 
                     </div>
-                    <div className='w-[80%] mx-auto bg-gray-400 rounded-md h-full'>
+                    <div className='text-center w-[80%] mx-auto bg-gray-400 rounded-md h-full flex items-center'>
+                      <div className='text-3xl font-bold w-full text-center'>
+                        {analysisRes===2?<h></h>:
+                        (analysisRes===1 ?<h>Initiate Fire protocol!!</h>:<h>No action Required!!</h>)}
+                          
+                          
+                      </div>
 
                     </div>
 
