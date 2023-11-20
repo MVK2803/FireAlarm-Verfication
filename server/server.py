@@ -24,7 +24,7 @@ def home():
         return jsonify({"error": "An error occurred"}), 500
     
 @app.route('/hello', methods=['GET'])
-def home():
+def test():
     print("hello")
 
 if __name__=="__main__":
