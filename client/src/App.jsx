@@ -59,7 +59,7 @@ function App() {
                   <div className=' w-[90%] mx-auto h-[80%] flex flex-col space-y-4'>
                     <div className=' flex flex-row justify-between w-[80%] mx-auto text-2xl font-bold text-white'>
                     <div className={`mt-10 p-[50px] ${analysisRes===0? 'bg-red-500':'bg-red-100'} rounded-md `}>
-                        <h>Fasle Alarm</h>
+                        <h>False Alarm</h>
                       </div>
                       
                       <div className={`mt-10 p-[50px] ${analysisRes===1? 'bg-lime-500':'bg-lime-100'} rounded-md `}>
