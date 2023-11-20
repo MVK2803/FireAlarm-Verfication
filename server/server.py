@@ -6,7 +6,7 @@ CORS(app)
 
 @app.route('/', methods=['POST'])
 def home():
-    print("REc")
+    print("REC")
     try:
         # Extract data from the request
         input_data = request.json['input_data']
@@ -22,6 +22,9 @@ def home():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred"}), 500
+
 @app.route('/hello')
 def hello_world():
     return 'Hello, World!'
+
+
