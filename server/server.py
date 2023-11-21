@@ -4,7 +4,7 @@ import fire_fun
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/verify', methods=['POST'])
 def home():
     print("REC")
     try:
@@ -22,7 +22,13 @@ def home():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred"}), 500
+
+    
+@app.route('/hello', methods=['GET'])
+def test():
+    return jsonify({"hello": "yay"}), 500
+
 if __name__=="__main__":
-    app.run(debug=True,port='5000',host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
