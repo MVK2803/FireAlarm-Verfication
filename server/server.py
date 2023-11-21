@@ -22,6 +22,7 @@ def home():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred"}), 500
+
     
 @app.route('/hello', methods=['GET'])
 def test():
@@ -29,4 +30,5 @@ def test():
 
 if __name__=="__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
+
 
