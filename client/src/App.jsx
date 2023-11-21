@@ -10,6 +10,7 @@ const labels = [
 
 function App() {
   const [inputData, setInputData] = useState({});
+  const [analyzing,setAnalyzing]=useState(false);
   const [triggerAlarm, setTriggerAlarm] = useState(false);
   const [analysisRes,setanalysisRes]=useState(2);
   const handleInputChange = (label, value) => {
@@ -32,9 +33,9 @@ function App() {
     //console.log('Sending data to the backend:', jsonData);
     try {
       //console.log(jsonData);
-
-      const result = await axios.post('https://varghesebackend2.onrender.com/verify', jsonData);
-
+      setAnalyzing(true);
+      const result = await axios.post('http://127.0.0.1:5000/verify', jsonData);
+      setAnalyzing(false);
       setanalysisRes(parseInt(result.data));
       console.log(result.data); 
     } catch (error) {
@@ -73,7 +74,7 @@ function App() {
                       <div className='text-3xl font-bold w-full text-center'>
                         {analysisRes===2?<h></h>:
                         (analysisRes===1 ?<h>Initiate Fire protocol!!</h>:<h>No action Required!!</h>)}
-                          
+                        {analyzing?<h>Analyzing  .....</h>:<h></h>}
                           
                       </div>
 
