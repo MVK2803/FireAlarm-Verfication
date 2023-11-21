@@ -34,7 +34,7 @@ function App() {
     try {
       //console.log(jsonData);
       setAnalyzing(true);
-      const result = await axios.post('http://127.0.0.1:5000/verify', jsonData);
+      const result = await axios.post('https://varghesebackend2.onrender.com/verify', jsonData);
       setAnalyzing(false);
       setanalysisRes(parseInt(result.data));
       console.log(result.data); 
